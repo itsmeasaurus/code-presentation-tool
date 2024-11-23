@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.presentation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+    padding: 20px;
+    background: #2d2d2d;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+.code-container {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+button {
+    background: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #1a1a1a;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.slide-counter {
+    color: #61dafb;
+    font-size: 1.2em;
+}

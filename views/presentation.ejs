@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Presentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    
+</head>
+<body>
+    <div class="presentation-container">
+        <% config.slides.forEach((slide, index) => { %>
+            <div class="slide" id="slide-<%= index + 1 %>">
+                <h2 class="slide-title"><%= slide.title %></h2>
+                <div class="code-container">
+                    <pre><code class="language-javascript"><%= slide.code %></code></pre>
+                </div>
+            </div>
+        <% }); %>
+        
+        <div class="controls">
+            <span id="totalSlides" style="visibility: hidden;"><%= config.totalSlides %></span>
+            <button id="prevSlide" onclick="changeSlide(-1)">Previous</button>
+            <span class="slide-counter">
+                Slide <span id="currentSlide">1</span> of <%= config.totalSlides %>
+            </span>
+            <button id="nextSlide" onclick="changeSlide(1)">Next</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
